@@ -17,6 +17,7 @@ jobs:
       - name: Publish
         run: |
           npm config set //registry.npmjs.org/:_authToken ${NPM_TOKEN}
+          npm i -g npm@next-9
           npm ci
           npm publish
         env:
